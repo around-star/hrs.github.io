@@ -1,3 +1,5 @@
+/* Base styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -92,32 +94,51 @@ h1 {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 768px) {
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
   header {
     flex-direction: column;
+    text-align: center;
   }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  
+  nav {
+    margin-top: 20px;
   }
-
+  
   nav li {
-    margin: 10px 0;
+    margin: 0;
   }
-
+  
+  nav a {
+    font-size: 16px;
+  }
+  
   .search-bar {
     flex-direction: column;
-    align-items: flex-start;
+    margin-top: 20px;
   }
-
+  
   .search-bar input[type="text"],
   .search-bar input[type="number"] {
-    width: 100%;
     margin-bottom: 10px;
+    margin-right: 0;
   }
-
+  
   #property-container {
     grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  
+  .property-card {
+    padding: 20px;
+  }
+  
+  .property-card h2 {
+    font-size: 20px;
+  }
+  
+  .property-card p {
+    font-size: 14px;
   }
 }
