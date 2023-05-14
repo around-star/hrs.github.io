@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 header {
@@ -89,4 +90,34 @@ h1 {
 
 .property-card p {
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar input[type="text"],
+  .search-bar input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #property-container {
+    grid-template-columns: 1fr;
+  }
 }
